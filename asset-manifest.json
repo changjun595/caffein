@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/developer-lecture-platform/static/css/main.e6c13ad2.css",
-    "main.js": "/developer-lecture-platform/static/js/main.c36edb1a.js",
-    "index.html": "/developer-lecture-platform/index.html",
-    "main.e6c13ad2.css.map": "/developer-lecture-platform/static/css/main.e6c13ad2.css.map",
-    "main.c36edb1a.js.map": "/developer-lecture-platform/static/js/main.c36edb1a.js.map"
+    "main.css": "/caffein/static/css/main.e6c13ad2.css",
+    "main.js": "/caffein/static/js/main.e279606f.js",
+    "index.html": "/caffein/index.html",
+    "main.e6c13ad2.css.map": "/caffein/static/css/main.e6c13ad2.css.map",
+    "main.e279606f.js.map": "/caffein/static/js/main.e279606f.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.c36edb1a.js"
+    "static/js/main.e279606f.js"
   ]
 }
