@@ -23,6 +23,7 @@ function App() {
 
       <button id="worldButton" onClick={handleClick2}>Click Me2</button>
       <div id="worldDiv"></div>
+      <div>hello world</div>
     </div>
   );
 }
