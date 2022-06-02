@@ -1,32 +1,19 @@
-import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
 
-function App() {
-  const handleClick = () => {
-    const divContent = document.getElementById("helloDiv");
+const App = () =>{
 
-    divContent!.innerHTML = "Hello"; 
-  } 
-
-  const handleClick2 = () => {
-    const divText = document.getElementById("worldDiv");
-
-    divText!.innerHTML = "World";
-  } 
   
 
 
 
   return (
-    <div className="App">
-      <button id="helloButton" onClick={handleClick}>Click Me</button>
-      <div id="helloDiv"></div>
-
-      <button id="worldButton" onClick={handleClick2}>Click Me2</button>
-      <div id="worldDiv"></div>
-      <div>hello world</div>
-      <div>develop</div>
-    </div>
+    <BrowserRouter basename="/">
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+  </BrowserRouter>
   );
-}
+};
 
 export default App;
