@@ -35,6 +35,7 @@ const HeaderSection = () => {
             height: "400px",
             left: "597.33px",
             top: "104px",
+            borderRadius : "10px",
         }}
         >
         </img>
