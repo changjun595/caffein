@@ -1,5 +1,4 @@
 
-
 const HeaderSection = () => {
     return(
         <div
@@ -28,12 +27,14 @@ const HeaderSection = () => {
             개발은<br />카페인과 함께
         </div>
         <img
-        style={{
-            position : "absolute",
-            width: "597.51px",
-            height: "400px",
-            left: "597.33px",
-            top: "104px",
+            src="https://raw.githubusercontent.com/changjun595/caffein/develop/src/image.png"
+            style={{
+                position : "absolute",
+                width: "597.51px",
+                height: "400px",
+                left: "597.33px",
+                top: "104px",
+                zIndex : "3",
         }}
         >
         </img>
