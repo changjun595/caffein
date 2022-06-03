@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {ICamp} from "../../../types/type";
 
 interface IProps {
@@ -8,11 +9,14 @@ interface IProps {
 const CampSection = ({title, camps} : IProps) => {
     return(
         <div>
-        <div>{title}</div>
-        <div style={{ display : "flex", }}>
+        <div style={{ marginLeft : "240px"}}><h2>{title}</h2></div>
+        <div style={{ display : "flex", marginLeft : "190px" }}>
             {camps.map((value, index)=>(
+                 <Link to = {`/camp/${value.id}`} style={{textDecoration : "none"}}>
                 <div 
                 style={{
+                    
+                    color : "white",
                     margin : "21.5px",
                     background : `url(${value.thumbnail})`,
                     width : "224px",
@@ -20,13 +24,17 @@ const CampSection = ({title, camps} : IProps) => {
                     borderRadius : "10px"
                 }}
                 key={index}>
-                        {value.status}<br />
-                        {value.name}<br />
-                        {value.startDate}
+                    <div style={{ paddingTop :"190px", paddingLeft : "10px"}}>
+                        <div style={{fontSize : "14px"}}>{value.status}</div>
+                        <div style={{fontSize : "16px", marginBottom : "10px"}}>{value.name}</div>
+                        <div style={{fontSize : "12px"}}>{value.startDate}</div>
+                    </div>
                 </div>
+                </Link>
             ))}
 
         </div>
+        
     </div>
     );
 };
