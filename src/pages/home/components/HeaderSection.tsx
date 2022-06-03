@@ -28,6 +28,7 @@ const HeaderSection = () => {
             개발은<br />카페인과 함께
         </div>
         <img
+        src="https://raw.githubusercontent.com/changjun595/caffein/develop/public/assets/image.png"
         style={{
             position : "absolute",
             width: "597.51px",
