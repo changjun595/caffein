@@ -16,3 +16,8 @@ export interface ICamp {
     content: string;
     comments: { profile: string; nickname: string; content: string }[];
   }
+  export interface IComment {
+    profile: string;
+    nickname: string;
+    content: string;
+  }
