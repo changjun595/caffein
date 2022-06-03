@@ -3,7 +3,7 @@ import Home from "./pages/home";
 
 const App = () =>{
   return (
-    <BrowserRouter>
+    <BrowserRouter  basename="/caffein">
     <Routes>
       <Route path="/" element={<Home />} />
     </Routes>
