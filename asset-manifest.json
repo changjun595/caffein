@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/caffein/static/css/main.e6c13ad2.css",
-    "main.js": "/caffein/static/js/main.51e9f84e.js",
+    "main.js": "/caffein/static/js/main.c4087ced.js",
     "index.html": "/caffein/index.html",
     "main.e6c13ad2.css.map": "/caffein/static/css/main.e6c13ad2.css.map",
-    "main.51e9f84e.js.map": "/caffein/static/js/main.51e9f84e.js.map"
+    "main.c4087ced.js.map": "/caffein/static/js/main.c4087ced.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.51e9f84e.js"
+    "static/js/main.c4087ced.js"
   ]
 }
