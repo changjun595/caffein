@@ -15,14 +15,14 @@ const CommunitySection = ({title, communites} : IProps) => {
         <div>
             <div style={{position : "absolute",
                         left : "245px",
-                        top : "1529px",
+                        top : "1580px",
                         fontSize : "24px",
                         fontWeight : "700"}}>{title}</div>
             <div style={{position : "absolute",
                         display : "flex",
                         width : "977.5px",
                         height : "320px",
-                        top : "1574px",
+                        top : "1634px",
                         left : "241px",
                         }}>
                 { 
