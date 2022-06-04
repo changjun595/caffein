@@ -12,10 +12,9 @@ const CampSection = ({title, camps} : IProps) => {
         <div style={{ marginLeft : "240px"}}><h2>{title}</h2></div>
         <div style={{ display : "flex", marginLeft : "190px" }}>
             {camps.map((value, index)=>(
-                 <Link to = {`/camp/${value.id}`} style={{textDecoration : "none"}}>
+                 <Link to = {`/camp/${value.id}`} key={index} style={{textDecoration : "none"}}>
                 <div 
-                style={{
-                    
+                style={{  
                     color : "white",
                     margin : "21.5px",
                     background : `url(${value.thumbnail})`,
