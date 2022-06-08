@@ -10,41 +10,45 @@ const Navigation = () => {
     const handleMouseLeave = () => {
         const peopleImageLeave = document.getElementById("peopleImage") as HTMLInputElement;
         peopleImageLeave.src = "https://raw.githubusercontent.com/congchu/caffein/week3/src/assets/images/icons/ic-person-white.png";
-    }    
+    }
+         
     return(
-        <div
-        style={{
-            background: "url(https://raw.githubusercontent.com/congchu/caffein/week3/src/assets/images/home_header_bg.jpg)",
-            backgroundRepeat : "no-repeat",
-            display: "flex",
-            padding: "20px",
-            gap: "20px",
-        }} 
-        >
-            <div style={{display : "flex"}}>
-            <Link to="/" style={{ textDecoration : "none", color : "white"}}>
-                <div
-                style={{
-                    fontFamily : "Roboto Slab",
-                    fontStyle : "normal",
-                    fontWeight : "700",
-                    fontSize : "24px",
-                    lineHeight : "32px",
-                    marginLeft : "248px"
-                }}>Caffein</div>
-            </Link>
-            <img id="peopleImage" src="https://raw.githubusercontent.com/congchu/caffein/week3/src/assets/images/icons/ic-person-white.png" 
-                onMouseOver={handleMouseOver}
-                onMouseLeave={handleMouseLeave}
-                style={{
-                    width : "18px", 
-                    height : "18px", 
-                    marginLeft : "820px",        
-                }}> 
-            </img>
+        <Container>
+            <div className="main">
+                <Link to="/" className="title">
+                    Caffein
+                </Link>
+                <img className="peopleImage" src="https://raw.githubusercontent.com/congchu/caffein/week3/src/assets/images/icons/ic-person-white.png" 
+                    onMouseOver={handleMouseOver}
+                    onMouseLeave={handleMouseLeave} /> 
             </div>
-        </div>
+        </Container>
     );
 };
 
 export default Navigation;
+
+const Container = styled.nav`
+    position: fixed;
+    width: 100%;
+
+    .main{
+        margin-top: 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .title{
+        margin-top: 16px;
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
+        font-family: "Roboto stab";
+        text-decoration: none;
+        margin-left: 246px;
+    }
+    .peopleImage{
+        width: 20px;
+        height: 20px;
+        margin-right : 20%;
+    }
+`;
