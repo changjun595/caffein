@@ -18,7 +18,10 @@ const Navigation = () => {
                 <Link to="/" className="title">
                     Caffein
                 </Link>
-                <img className="peopleImage" src="https://raw.githubusercontent.com/congchu/caffein/week3/src/assets/images/icons/ic-person-white.png" 
+                <img
+                    id="peopleImage" 
+                    className="peopleImage" 
+                    src="https://raw.githubusercontent.com/congchu/caffein/week3/src/assets/images/icons/ic-person-white.png" 
                     onMouseOver={handleMouseOver}
                     onMouseLeave={handleMouseLeave} /> 
             </div>
@@ -29,11 +32,12 @@ const Navigation = () => {
 export default Navigation;
 
 const Container = styled.nav`
-    position: fixed;
     width: 100%;
+    background-image: url("https://raw.githubusercontent.com/congchu/caffein/week3/src/assets/images/home_header_bg.jpg");
+    background-repeat: no-repeat;
 
     .main{
-        margin-top: 16px;
+        width: 100%;
         display: flex;
         justify-content: space-between;
     }
@@ -47,8 +51,10 @@ const Container = styled.nav`
         margin-left: 246px;
     }
     .peopleImage{
+        margin-top: 16px;
         width: 20px;
         height: 20px;
         margin-right : 20%;
+        cursor: pointer;
     }
 `;
