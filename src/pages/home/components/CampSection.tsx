@@ -35,7 +35,6 @@ const Container = styled.div`
 
     .camp_title{
         text-align: center;
-        margin-left: -35%;
     }
     .camp_card{
         width: 100%;

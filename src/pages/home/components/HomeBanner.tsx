@@ -14,6 +14,7 @@ const HomeBanner = () =>{
 export default HomeBanner;
 
 const Container = styled.div`
+    margin-top: 56px;
     position: relative;
     width: 1020px;
     height: 100px;

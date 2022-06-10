@@ -1,6 +1,8 @@
 
 import { Comments } from "../../../components";
 import { ICommunity } from "../../../types/type"
+import styled from "styled-components";
+import fonts from "../../../style/fonts";
 
 interface IProps {
     title : string,
@@ -12,32 +14,38 @@ interface IComment{
 }
 const CommunitySection = ({title, communites} : IProps) => {
     return (
-        <div>
-            <div style={{position : "absolute",
-                        left : "245px",
-                        top : "1580px",
-                        fontSize : "24px",
-                        fontWeight : "700"}}>{title}</div>
-            <div style={{position : "absolute",
-                        display : "flex",
-                        width : "977.5px",
-                        height : "320px",
-                        top : "1634px",
-                        left : "241px",
-                        }}>
+        <Container>
+        <div className="community_container">
+            <div className="community_title">{title}</div>
+            <div className="community_card">
                 { 
                 communites.map((value, index) =>(
-                    <div key={index} style={{marginRight : "21.5px"}}>
-                        <div style={{marginBottom : "15px"}}>{value.tags}</div>
+                    <div key={index}>
+                        <div>{value.tags}</div>
                         <div><h3>{value.title}</h3></div>
                         <div>{value.content}</div>    
-                    
                     </div>
                 ))
                 }
-                
             </div>            
         </div>
+        </Container>
     );
 };
 export default CommunitySection;
+
+const Container = styled.div`
+    width: 100%;
+    
+    .community_title{
+        ${fonts.H2}
+        margin-top: 132px;
+        margin-bottom: 36px;
+        text-align: center;
+    }
+    .community_card{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+`
