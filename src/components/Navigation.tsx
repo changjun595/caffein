@@ -33,8 +33,7 @@ export default Navigation;
 
 const Container = styled.nav`
     width: 100%;
-    background-image: url("https://raw.githubusercontent.com/congchu/caffein/week3/src/assets/images/home_header_bg.jpg");
-    background-repeat: no-repeat;
+    background: linear-gradient(97.88deg, #854BFF -84.42%, #7179FF 15.02%, #6D83FF 36.89%, #698BFF 54.79%, #6499FF 80.65%, #659BF7 108.49%, #669FEA 148.27%, #69A9CD 197.99%, #6CB1B2 239.75%);
 
     .main{
         width: 100%;
@@ -48,13 +47,13 @@ const Container = styled.nav`
         font-weight: 700;
         font-family: "Roboto stab";
         text-decoration: none;
-        margin-left: 246px;
+        margin-left: 5%;
     }
     .peopleImage{
         margin-top: 16px;
         width: 20px;
         height: 20px;
-        margin-right : 20%;
+        margin-right: 20px;
         cursor: pointer;
     }
 `;

@@ -25,6 +25,7 @@ const Container = styled.header`
     .header_content{
         display: flex;
         justify-content: flex-end;
+        
     }
     .header_text{
         margin-top: 342px;
@@ -37,7 +38,7 @@ const Container = styled.header`
         border-radius: 10px;
         margin-top: 104px;
         margin-bottom: 56px;
-        margin-right: 10%;
+        margin-right: 20px;
         width: 597.51px;
         height: 400px;
     }
