@@ -24,12 +24,13 @@ const Container = styled.header`
 
     .header_content{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         
     }
     .header_text{
         margin-top: 342px;
         margin-left: 10%;
+        margin-right: 80.32px;
         color: #ffffff;
         font-weight: bold;
         font-size: 48px;
