@@ -20,7 +20,7 @@ export default HomeBanner;
 const Container = styled.div`
     margin-top: 56px;
     position: relative;
-    width: 1020px;
+    width: 80%;
     height: 100px;
     display: flex;
     background: url("https://raw.githubusercontent.com/congchu/caffein/week3/src/assets/images/home_header_bg.jpg");
@@ -39,6 +39,9 @@ const Container = styled.div`
         transform: translateY(-50%);
     }
     @media (max-width: 960px) {
+        div{
+            width: 100%;
+        }
         .homebanner_text{
             flex-direction: column;
         }
