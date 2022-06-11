@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import {ICamp} from "../../../types/type";
 import styled from "styled-components";
+import { maxWidth } from "../../../style/widthmax";
 
 interface IProps {
     title : string,
@@ -14,7 +15,7 @@ const CampSection = ({title, camps} : IProps) => {
             <div className="camp_card">
             {camps.map((value, index)=>(
                  <Link to = {`/camp/${value.id}`} key={index} className="camp_component">
-                <div className="camp_background" style={{background : `url(${value.thumbnail})`}}>
+                <div className="camp_background" style={{background : `url(${value.thumbnail})`, backgroundRepeat : "no-repeat"}}>
                     <div className="camp_context">
                         <div className="camp_status">{value.status}</div>
                         <div className="camp_name">{value.name}</div>
@@ -70,5 +71,19 @@ const Container = styled.div`
     .camp_startDate{
         font-size: 12px;
         padding-bottom: 5%;
+    }
+    @media (max-width: 960px) {
+        .camp_title{
+            margin-top: 350px;
+        }
+        .camp_card{
+            flex-direction: column;
+        }
+        .camp_background{
+            margin-bottom: 10px;
+            border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 `;

@@ -143,8 +143,4 @@ export default Home;
 const Container = styled.div`
     margin: 0 auto;
     
-    main {
-        ${maxWidth}
-        margin: 0 auto;
-    }
 `
