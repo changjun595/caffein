@@ -1,45 +1,47 @@
-
+import styled from "styled-components";
 
 const HeaderSection = () => {
     return(
-        <div
-        style={{
-            background: "url(https://raw.githubusercontent.com/congchu/caffein/week3/src/assets/images/home_header_bg.jpg)",  
-            width : "1438px",
-            height : "560px",
-            left : "0px",
-            top : "0px",
-        }}>
-
-        <div
-        style={{
-            position : "absolute",
-            width : "278.84px",
-            height : "100.8px",
-            left : "238.18px",
-            top : "342.6px",
-            fontFamily : "Noto Sans",
-            fontStyle : "normal",
-            fontWeight : "700",
-            fontSize : "32px",
-            lineHeight : "65px",
-            color : "white",
-        }}>
-            개발은<br />카페인과 함께
-        </div>
-        <img
-        src="https://raw.githubusercontent.com/changjun595/caffein/develop/public/assets/image.png"
-        style={{
-            position : "absolute",
-            width: "597.51px",
-            height: "400px",
-            left: "597.33px",
-            top: "104px",
-            borderRadius : "10px",
-        }}
-        >
-        </img>
-        </div>
+        <Container>
+            <div className="header_content">
+                <div className="header_text">
+                    개발은<br />카페인과 함께
+                </div>
+                <img
+                className="header_image"
+                src="https://raw.githubusercontent.com/changjun595/caffein/develop/public/assets/image.png" />
+            </div>
+        </Container>
     );
 };
 export default HeaderSection;
+
+const Container = styled.header`
+    width: 100%;
+    height: 560px;
+    background: linear-gradient(
+        97.88deg, #854BFF -84.42%, #7179FF 15.02%, #6D83FF 36.89%, #698BFF 54.79%, #6499FF 80.65%, #659BF7 108.49%, #669FEA 148.27%, #69A9CD 197.99%, #6CB1B2 239.75%);
+
+    .header_content{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .header_text{
+        margin-top: 342px;
+        margin-left: 10%;
+        margin-right: 80.32px;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 48px;
+    }
+    .header_image{
+        border-radius: 10px;
+        margin-top: 104px;
+        margin-bottom: 56px;
+        margin-right: 10%;
+        width: 597.51px;
+        height: 400px;
+    }
+
+`;

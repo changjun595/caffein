@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import {ICamp} from "../../../types/type";
+import styled from "styled-components";
 
 interface IProps {
     title : string,
@@ -8,34 +9,66 @@ interface IProps {
 
 const CampSection = ({title, camps} : IProps) => {
     return(
-        <div>
-        <div style={{ marginLeft : "240px"}}><h2>{title}</h2></div>
-        <div style={{ display : "flex", marginLeft : "190px" }}>
+        <Container>
+        <div className="camp_title"><h2>{title}</h2></div>
+            <div className="camp_card">
             {camps.map((value, index)=>(
-                 <Link to = {`/camp/${value.id}`} key={index} style={{textDecoration : "none"}}>
-                <div 
-                style={{  
-                    color : "white",
-                    margin : "21.5px",
-                    background : `url(${value.thumbnail})`,
-                    width : "224px",
-                    height : "280px",
-                    borderRadius : "10px"
-                }}
-                key={index}>
-                    <div style={{ paddingTop :"190px", paddingLeft : "10px"}}>
-                        <div style={{fontSize : "14px"}}>{value.status}</div>
-                        <div style={{fontSize : "16px", marginBottom : "10px"}}>{value.name}</div>
-                        <div style={{fontSize : "12px"}}>{value.startDate}</div>
+                 <Link to = {`/camp/${value.id}`} key={index} className="camp_component">
+                <div className="camp_background" style={{background : `url(${value.thumbnail})`}}>
+                    <div className="camp_context">
+                        <div className="camp_status">{value.status}</div>
+                        <div className="camp_name">{value.name}</div>
+                        <div className="camp_startDate">{value.startDate}</div>
                     </div>
                 </div>
                 </Link>
             ))}
-
-        </div>
-        
-    </div>
+            </div>        
+    </Container>
     );
 };
 
 export default CampSection;
+
+const Container = styled.div`
+    width: 100%;
+
+    .camp_title{
+        text-align: center;
+    }
+    .camp_card{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .camp_component{
+        text-decoration: none;
+    }
+    .camp_background{
+        color : white;
+        margin : 21.5px;
+        width : 224px;
+        height : 280px;
+        border-radius : 10px;
+    }
+    .camp_context{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .camp_status{
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .camp_name{
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .camp_startDate{
+        font-size: 12px;
+        padding-bottom: 5%;
+    }
+`;
