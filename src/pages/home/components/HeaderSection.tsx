@@ -54,8 +54,12 @@ const Container = styled.header`
         }
         .header_image{
             margin-left: auto;
-            margin-right: auto
-            ;
+            margin-right: auto;
+        }
+    }
+    @media (max-width: 767px) {
+        .header_image{
+            width: 80%;
         }
     }
 `;
