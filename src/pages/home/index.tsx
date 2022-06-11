@@ -4,6 +4,8 @@ import { Footer, Navigation } from "../../components";
 import { ICamp, ICommunity } from "../../types/type";
 import { CommunitySection, HeaderSection, HomeBanner } from "./components";
 import { CampSection } from "./components";
+import styled from "styled-components";
+import { maxWidth } from "../../style/widthmax";
 
 const campList0 : ICamp = {
     id : 0,
@@ -122,16 +124,23 @@ const Home = () => {
     }, []);
     
     return(
-        <div>
+        <Container>
             <Navigation />
             <HeaderSection />
-            <CampSection title="인기 부트 캠프" camps={popuarCamps} />
-            <CampSection title="특가 할인 캠프" camps={saleCamps} />
-            <HomeBanner />
-            <CommunitySection title="커뮤니티" communites={communities} />
+            <main>
+                <CampSection title="인기 부트 캠프" camps={popuarCamps} />
+                <CampSection title="특가 할인 캠프" camps={saleCamps} />
+                <HomeBanner />
+                <CommunitySection title="커뮤니티" communites={communities} />
+            </main>
             <Footer />
-        </div>
+        </Container>
     );
 };
 
 export default Home;
+
+const Container = styled.div`
+    margin: 0 auto;
+    
+`

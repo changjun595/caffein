@@ -48,4 +48,9 @@ const Container = styled.div`
         justify-content: center;
         gap: 20px;
     }
+    @media (max-width: 960px) {
+        .community_container{
+            visibility: hidden;
+        }
+    }
 `
