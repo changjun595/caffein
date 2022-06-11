@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { maxWidth } from "../../../style/widthmax";
 
 const HeaderSection = () => {
     return(
@@ -19,13 +20,13 @@ export default HeaderSection;
 const Container = styled.header`
     width: 100%;
     height: 560px;
-    background: linear-gradient(
-        97.88deg, #854BFF -84.42%, #7179FF 15.02%, #6D83FF 36.89%, #698BFF 54.79%, #6499FF 80.65%, #659BF7 108.49%, #669FEA 148.27%, #69A9CD 197.99%, #6CB1B2 239.75%);
+    
 
     .header_content{
         display: flex;
         justify-content: center;
-        
+        background: linear-gradient(
+        97.88deg, #854BFF -84.42%, #7179FF 15.02%, #6D83FF 36.89%, #698BFF 54.79%, #6499FF 80.65%, #659BF7 108.49%, #669FEA 148.27%, #69A9CD 197.99%, #6CB1B2 239.75%);    
     }
     .header_text{
         margin-top: 342px;
@@ -43,5 +44,18 @@ const Container = styled.header`
         width: 597.51px;
         height: 400px;
     }
-
+    @media (max-width : 960px) {
+        
+        .header_content{
+            flex-direction: column;
+        }       
+        .header_text{
+            margin-top: 100px;
+        }
+        .header_image{
+            margin-left: auto;
+            margin-right: auto
+            ;
+        }
+    }
 `;

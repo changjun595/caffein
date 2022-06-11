@@ -58,9 +58,5 @@ const Container = styled.nav`
         margin-right: 10%;
         cursor: pointer;
     }
-    @media (${maxWidth}) {
-        .main{
-            ${maxWidth}
-        }    
-    }
+    
 `;
