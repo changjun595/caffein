@@ -44,4 +44,13 @@ const Container = styled.footer`
         ${fonts.Caption}
         padding-top: 32px;
     }
+    @media (max-width : 960px) {
+        .footer_container{
+            margin-top: -400px;
+            flex-direction: column;
+        }
+        .logo{
+        padding-left: 250px;
+    }
+    }
 `;
