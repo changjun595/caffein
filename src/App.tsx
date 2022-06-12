@@ -2,15 +2,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CampApply, CampDetail } from "./pages";
 import Home from "./pages/home";
 
-const App = () =>{
+const App = () => {
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/camp/apply" element={<CampApply />} />
-      <Route path="/camp/:id" element={<CampDetail />} />
-    </Routes>
-  </BrowserRouter>
+    <BrowserRouter basename="caffein">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/camp/apply" element={<CampApply />} />
+        <Route path="/camp/:id" element={<CampDetail />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
